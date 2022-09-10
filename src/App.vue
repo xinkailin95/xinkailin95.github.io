@@ -1,13 +1,12 @@
 <template>
   <div>
-    <h1>Welcome to my website</h1>
+    <router-view></router-view>
   </div>
-  <router-link to="/">Home</router-link>
 </template>
 
 <script>
   export default {
-    name: 'MyApp',
+    name: 'App',
   };
 </script>
 
