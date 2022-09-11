@@ -9,7 +9,7 @@ module.exports = defineConfig({
     index: {
       // entry for the page
       entry: 'src/main.js',
-      title: 'Welcome | Xinkai',
+      title: 'Welcome | Xinkai Lin',
     },
   },
   // auto import element-plus

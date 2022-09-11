@@ -3,10 +3,6 @@ import { createRouter, createWebHashHistory } from 'vue-router';
 const routes = [
   {
     path: '/',
-    redirect: '/home',
-  },
-  {
-    path: '/home',
     name: 'home',
     component: () => import('../views/Home.vue'),
   },
@@ -14,6 +10,7 @@ const routes = [
 
 const router = createRouter({
   history: createWebHashHistory(),
+  linkActiveClass: 'active-router',
   routes,
 });
 
