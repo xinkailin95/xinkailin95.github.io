@@ -1,5 +1,9 @@
 <template>
-  <div class="footer">Footer</div>
+  <div class="footer">
+    <div class="copy-right">
+      <span>© Xinkai Lin. All Rights Reserved 2022</span>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -12,6 +16,13 @@
   .footer {
     height: 120px;
     text-align: center;
+    font-size: 13px;
+    color: grey;
     background-color: whitesmoke;
+    .copy-right {
+      position: fixed;
+      padding: 50px 0px 0px 100px;
+      //   background-color: red;
+    }
   }
 </style>
