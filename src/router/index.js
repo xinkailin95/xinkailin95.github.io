@@ -1,15 +1,33 @@
-import { createRouter, createWebHashHistory } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: () => import('../views/Home.vue'),
+    name: 'index',
+    redirect: '/home',
+    component: () => import('../views/index.vue'),
+    children: [
+      {
+        path: '/home',
+        name: 'home',
+        component: () => import('../components/Home.vue'),
+      },
+      {
+        path: '/about',
+        name: 'about',
+        component: () => import('../components/About.vue'),
+      },
+      {
+        path: '/contact',
+        name: 'contact',
+        component: () => import('../components/Contact.vue'),
+      },
+    ],
   },
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   linkActiveClass: 'active-router',
   routes,
 });

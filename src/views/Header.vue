@@ -9,10 +9,14 @@
       <el-col :span="4">
         <div class="grid-content ep-bg-purple myLink">
           <ul>
-            <li><router-link class="linkColor" to="/">Home</router-link></li>
-            <li><router-link class="linkColor" to="/a">About</router-link></li>
             <li>
-              <router-link class="linkColor" to="/a ">Contact</router-link>
+              <router-link class="linkColor" to="/home">Home</router-link>
+            </li>
+            <li>
+              <router-link class="linkColor" to="/about">About</router-link>
+            </li>
+            <li>
+              <router-link class="linkColor" to="/contact">Contact</router-link>
             </li>
           </ul>
         </div>
@@ -34,16 +38,17 @@
 
 <style lang="less" scoped>
   .header {
+    // position: absolute;
     height: 110px;
-    min-width: 1000px;
+    // min-width: 1000px;
     font-size: 20px;
-    background-color: white;
+    // background-color: blue;
     .myName {
       margin-top: 10px;
       padding: 10px 0px 0px 20px;
       height: 80px;
       border-right: 1px solid gray;
-      //   background-color: red;
+      // background-color: red;
     }
     .myLink {
       padding-top: 20px;
@@ -62,15 +67,15 @@
     .active-router:hover {
       color: black;
     }
-  }
-  el-row {
-    margin-bottom: 20px;
-  }
-  el-row:last-child {
-    margin-bottom: 0;
-  }
-  .grid-content {
-    border-radius: 4px;
-    min-height: 36px;
+    el-row {
+      margin-bottom: 20px;
+    }
+    el-row:last-child {
+      margin-bottom: 0;
+    }
+    .grid-content {
+      // border-radius: 4px;
+      min-height: 36px;
+    }
   }
 </style>

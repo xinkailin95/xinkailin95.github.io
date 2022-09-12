@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="index">
     <!-- header on top -->
     <el-affix :offset="0">
       <my-header></my-header>
@@ -15,7 +15,7 @@
   import MyFooter from './Footer.vue';
 
   export default {
-    name: 'MyHome',
+    name: 'MyIndex',
     components: {
       MyHeader,
       MyMain,
@@ -25,8 +25,10 @@
 </script>
 
 <style lang="less" scoped>
-  .home {
+  .index {
     height: 100%;
+    top: 100;
+    // position: relative;
     display: flex;
     flex-direction: column;
   }

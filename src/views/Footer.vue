@@ -19,10 +19,12 @@
     font-size: 13px;
     color: grey;
     background-color: whitesmoke;
+    position: absolute;
+    bottom: 0;
     .copy-right {
       position: fixed;
       padding: 50px 0px 0px 100px;
-      //   background-color: red;
+      // background-color: yellow;
     }
   }
 </style>

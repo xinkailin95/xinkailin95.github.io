@@ -1,12 +1,12 @@
 <template>
   <div>
-    <router-view></router-view>
+    <p>This is contact</p>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'MyMain',
+    name: 'MyContact',
   };
 </script>
 
