@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkxinkailin95_github_io"]=self["webpackChunkxinkailin95_github_io"]||[]).push([[690],{690:(i,n,u)=>{u.r(n),u.d(n,{default:()=>b});var t=u(3396),e=(0,t._)("p",null,"This is about.",-1),a=[e];function l(i,n,u,e,l,s){return(0,t.wg)(),(0,t.iD)("div",null,a)}const s={name:"MyAbout"};var r=u(89);const o=(0,r.Z)(s,[["render",l]]),b=o}}]);
+//# sourceMappingURL=690.b31e1470.js.map
