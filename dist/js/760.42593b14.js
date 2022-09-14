@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkxinkailin95_github_io"]=self["webpackChunkxinkailin95_github_io"]||[]).push([[760],{1748:(n,u,i)=>{i.r(u),i.d(u,{default:()=>b});var t=i(9740),e=(i(4567),i(3396)),a=(0,e._)("p",null,"This is about.",-1);function r(n,u,i,r,l,s){var o=t.b2;return(0,e.wg)(),(0,e.j4)(o,null,{default:(0,e.w5)((function(){return[a]})),_:1})}const l={name:"MyAbout"};var s=i(89);const o=(0,s.Z)(l,[["render",r]]),b=o},4567:(n,u,i)=>{i(1758)}}]);
+//# sourceMappingURL=760.42593b14.js.map

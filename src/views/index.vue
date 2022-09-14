@@ -24,12 +24,4 @@
   };
 </script>
 
-<style lang="less" scoped>
-  .index {
-    height: 100%;
-    top: 100;
-    // position: relative;
-    display: flex;
-    flex-direction: column;
-  }
-</style>
+<style lang="less" scoped></style>

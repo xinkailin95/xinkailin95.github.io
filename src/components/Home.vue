@@ -1,22 +1,19 @@
 <template>
-  <div class="main">
-    <img class="helloImg" src="@/assets/images/hello.jpeg" alt="" />
-  </div>
+  <el-main class="home">
+    <img src="@/assets/images/hello.jpeg" alt="" />
+  </el-main>
 </template>
 
 <script>
   export default {
-    name: 'MyGreeting',
+    name: 'MyHome',
   };
 </script>
 
 <style lang="less" scoped>
-  .main {
-    flex: 1;
+  .home {
     text-align: center;
-    .helloImg {
-      max-width: 100%;
-      overflow: hidden;
-    }
+    height: 780px;
+    // background: url(@/assets/images/hello.jpeg) no-repeat fixed center top;
   }
 </style>

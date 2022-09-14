@@ -3,18 +3,43 @@
   padding: 0;
 }
 
+em,
+i {
+  font-style: normal;
+}
+
 ul {
   list-style: none;
 }
 
 a {
+  color: #666;
   text-decoration: none;
 }
 
 img {
+  border: 0;
   vertical-align: middle;
 }
 
+button {
+  cursor: pointer;
+}
+
 body {
-  font-size: 14px;
+  font: 12px/1.5 Microsoft YaHei;
+}
+
+/* fix floating problem */
+.clearfix:before,
+.clearfix:after {
+  content: '';
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  /*for IE6,7*/
+  *zoom: 1;
 }

@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <el-main>
     <p>This is contact</p>
-  </div>
+  </el-main>
 </template>
 
 <script>

@@ -1,33 +1,23 @@
 <template>
-  <div class="header">
-    <el-row :gutter="20">
-      <el-col :span="4">
-        <div class="grid-content ep-bg-purple myName">
-          <h1>Xinkai Lin</h1>
-        </div>
-      </el-col>
-      <el-col :span="4">
-        <div class="grid-content ep-bg-purple myLink">
-          <ul>
-            <li>
-              <router-link class="linkColor" to="/home">Home</router-link>
-            </li>
-            <li>
-              <router-link class="linkColor" to="/about">About</router-link>
-            </li>
-            <li>
-              <router-link class="linkColor" to="/contact">Contact</router-link>
-            </li>
-          </ul>
-        </div>
-      </el-col>
-      <el-col :span="10">
-        <div class="grid-content ep-bg-purple greeting">
-          <p>Welcome to my website, take a look around~</p>
-        </div>
-      </el-col>
-    </el-row>
-  </div>
+  <el-header class="header clearfix">
+    <div class="myName">
+      <h1>Xinkai Lin</h1>
+    </div>
+    <div class="myLink">
+      <ul>
+        <li><router-link class="linkColor" to="/home">Home</router-link></li>
+        <li>
+          <router-link class="linkColor" to="/about">About</router-link>
+        </li>
+        <li>
+          <router-link class="linkColor" to="/contact">Contact</router-link>
+        </li>
+      </ul>
+    </div>
+    <div class="greeting">
+      <h2>Welcome to my website, take a look around~</h2>
+    </div>
+  </el-header>
 </template>
 
 <script>
@@ -38,44 +28,40 @@
 
 <style lang="less" scoped>
   .header {
-    // position: absolute;
-    height: 110px;
-    // min-width: 1000px;
+    min-width: 1500px;
+    height: 120px;
     font-size: 20px;
-    // background-color: blue;
+    background-color: #fcfcfc;
     .myName {
-      margin-top: 10px;
-      padding: 10px 0px 0px 20px;
-      height: 80px;
-      border-right: 1px solid gray;
+      float: left;
+      margin: 10px 10px 10px 0;
+      width: 200px;
+      line-height: 100px;
+      border-right: 1px solid #edeef0;
       // background-color: red;
     }
     .myLink {
+      float: left;
       padding-top: 20px;
     }
     .greeting {
-      font-size: 30px;
-      padding-top: 25px;
+      float: left;
+      margin-left: 255px;
+      // width: 544px;
+      line-height: 120px;
+      h2 {
+        font-weight: 400;
+      }
     }
     .linkColor {
       color: grey;
       font-weight: bold;
     }
+    .linkColor:hover {
+      color: #333;
+    }
     .active-router {
-      color: black;
-    }
-    .active-router:hover {
-      color: black;
-    }
-    el-row {
-      margin-bottom: 20px;
-    }
-    el-row:last-child {
-      margin-bottom: 0;
-    }
-    .grid-content {
-      // border-radius: 4px;
-      min-height: 36px;
+      color: #333;
     }
   }
 </style>
