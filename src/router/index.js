@@ -5,22 +5,22 @@ const routes = [
     path: '/',
     name: 'index',
     redirect: '/home',
-    component: () => import('../views/index.vue'),
+    component: () => import('@/views/index.vue'),
     children: [
       {
         path: '/home',
         name: 'home',
-        component: () => import('../components/Home.vue'),
+        component: () => import('@/views/main/Home.vue'),
       },
       {
         path: '/about',
         name: 'about',
-        component: () => import('../components/About.vue'),
+        component: () => import('@/views/main/About.vue'),
       },
       {
         path: '/contact',
         name: 'contact',
-        component: () => import('../components/Contact.vue'),
+        component: () => import('@/views/main/Contact.vue'),
       },
     ],
   },

@@ -1,6 +1,8 @@
 * {
   margin: 0;
   padding: 0;
+  /* size with be same as declare no matter the padding and border */
+  box-sizing: border-box;
 }
 
 em,
@@ -31,12 +33,12 @@ body {
 }
 
 /* fix floating problem */
-.clearfix:before,
-.clearfix:after {
+.clearfix::before,
+.clearfix::after {
   content: '';
   display: table;
 }
-.clearfix:after {
+.clearfix::after {
   clear: both;
 }
 .clearfix {

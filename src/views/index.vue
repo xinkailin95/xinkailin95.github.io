@@ -10,9 +10,9 @@
 </template>
 
 <script>
-  import MyHeader from './Header.vue';
-  import MyMain from './Main.vue';
-  import MyFooter from './Footer.vue';
+  import MyHeader from '@/views/layout/Header.vue';
+  import MyMain from '@/views/layout/Main.vue';
+  import MyFooter from '@/views/layout/Footer.vue';
 
   export default {
     name: 'MyIndex',
