@@ -13,6 +13,7 @@
         index: 0,
         timer: 0,
         words: '',
+        content: '',
         blink: true,
       };
     },
@@ -21,25 +22,29 @@
     },
     mounted() {
       this.setBlink();
-      setTimeout(() => {
-        this.start();
-      }, 2400);
+      this.start();
     },
     methods: {
       start() {
-        let word = this.contents.reduce((prev, curr) => prev + ' ' + curr, '');
-        this.typing(word);
+        this.content = this.contents.reduce(
+          (prev, curr) => prev + ' ' + curr,
+          ''
+        );
+
+        this.timer = setTimeout(() => {
+          this.typing();
+        }, 2400);
       },
-      typing(word) {
-        if (this.index <= word.length) {
-          if (word.slice(this.index, this.index + 1) === '<') {
-            let close = word.slice(this.index).indexOf('>');
-            // let tag = word.slice(this.index, this.index + close + 1);
+      typing() {
+        if (this.index <= this.content.length) {
+          if (this.content.slice(this.index, this.index + 1) === '<') {
+            let close = this.content.slice(this.index).indexOf('>');
+            // let tag = this.content.slice(this.index, this.index + close + 1);
             this.index += close;
           }
-          this.words = word.slice(0, this.index++);
+          this.words = this.content.slice(0, this.index++);
           this.timer = setTimeout(() => {
-            this.typing(word);
+            this.typing();
           }, 100);
         }
       },
@@ -48,6 +53,10 @@
         setTimeout(() => {
           this.setBlink();
         }, 500);
+      },
+      showAll() {
+        clearTimeout(this.timer);
+        this.words = this.content;
       },
       sleep(ms) {
         return new Promise((resolve) => setTimeout(resolve, ms));

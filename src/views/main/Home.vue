@@ -1,6 +1,6 @@
 <template>
-  <div class="home">
-    <type-writer class="info" :contents="contents"></type-writer>
+  <div class="home" @dblclick="showAllContents">
+    <type-writer class="info" ref="clickRef" :contents="contents"></type-writer>
   </div>
 </template>
 
@@ -22,6 +22,11 @@
           "I like <span class='underline'>g</span>ames, <span class='underline'>g</span>uitar, <span class='underline'>tra</span>vel and <span class='underline'>photo</span>graph.",
         ],
       };
+    },
+    methods: {
+      showAllContents() {
+        this.$refs.clickRef.showAll();
+      },
     },
   };
 </script>
