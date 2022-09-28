@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <!-- <span class="font" v-for="(v, k) in words">{{ v }}</span> -->
-    <span class="font" v-html="word"></span>
+  <div class="font">
+    <span v-html="words"></span>
+    <span v-show="blink">|</span>
   </div>
 </template>
 
@@ -10,51 +10,54 @@
     name: 'TypeWriter',
     data() {
       return {
-        words: [],
-        strArr: [],
-        idx: 0,
+        index: 0,
         timer: 0,
-        word: '',
+        words: '',
+        blink: true,
       };
     },
+    props: {
+      contents: Array,
+    },
     mounted() {
-      // this.start();
-      this.typing();
+      this.setBlink();
+      setTimeout(() => {
+        this.start();
+      }, 2400);
     },
     methods: {
-      typing() {
-        if (this.idx <= this.str.length) {
-          // 1. need to deal with </br> case
-          // 2. add cursor effect
-          this.word =
-            this.str.slice(0, this.idx++) +
-            '</span>' +
-            '<span class="cursor">|</span>';
-          this.timer = setTimeout(() => {
-            this.typing();
-          }, 50);
-        }
-      },
       start() {
-        //将获取到的字符串切割成数组
-        this.strArr = this.str.split('');
-        //循环将单个的文字 延时追加到words数组中
-        for (let i = 0; i < this.strArr.length; i++) {
-          let res = setTimeout(this.write(i), i * 150);
+        let word = this.contents.reduce((prev, curr) => prev + ' ' + curr, '');
+        this.typing(word);
+      },
+      typing(word) {
+        if (this.index <= word.length) {
+          if (word.slice(this.index, this.index + 1) === '<') {
+            let close = word.slice(this.index).indexOf('>');
+            // let tag = word.slice(this.index, this.index + close + 1);
+            this.index += close;
+          }
+          this.words = word.slice(0, this.index++);
+          this.timer = setTimeout(() => {
+            this.typing(word);
+          }, 100);
         }
       },
-      write(i) {
-        return () => {
-          this.words.push(this.strArr[i]);
-        };
+      setBlink() {
+        this.blink = !this.blink;
+        setTimeout(() => {
+          this.setBlink();
+        }, 500);
+      },
+      sleep(ms) {
+        return new Promise((resolve) => setTimeout(resolve, ms));
       },
     },
-    props: ['str'],
   };
 </script>
 
 <style lang="less" scoped>
   .font {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 </style>

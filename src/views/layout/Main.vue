@@ -1,5 +1,5 @@
 <template>
-  <el-main><router-view></router-view></el-main>
+  <el-main class="w"><router-view></router-view></el-main>
 </template>
 
 <script>
@@ -8,9 +8,4 @@
   };
 </script>
 
-<style lang="less" scoped>
-  .el-main {
-    width: 1200px;
-    margin: 0 auto; /*this margin for the container */
-  }
-</style>
+<style lang="less" scoped></style>

@@ -1,7 +1,7 @@
 <template>
-  <el-header class="clearfix">
+  <el-header class="w clearfix">
     <div class="my-name">
-      <h1><router-link to="/">Xinkai Lin</router-link></h1>
+      <h1><router-link class="name" to="/">Xinkai Lin</router-link></h1>
     </div>
     <div class="my-link">
       <ul>
@@ -24,20 +24,27 @@
 </script>
 
 <style lang="less" scoped>
+  @blue-green: #4dc0b5;
+
   .el-header {
-    margin: 0 auto;
     height: 130px;
     font-size: 20px;
-    background-color: #fcfcfc;
+    // background-color: #fcfcfc;
+    margin-bottom: 20px;
     text-align: center;
     .my-name {
       line-height: 100px;
+      .name {
+        border-bottom: none;
+      }
     }
     .my-link {
       height: 25px;
-      ul li {
-        display: inline-block;
-        padding: 0 20px;
+      ul {
+        li {
+          display: inline-block;
+          padding: 0 20px;
+        }
       }
     }
     .link-color {
@@ -45,10 +52,14 @@
       font-weight: bold;
     }
     .link-color:hover {
-      color: #333;
+      color: #2d3748;
+      border-bottom: 2px solid;
+      border-color: @blue-green;
     }
     .active-router {
-      color: #333;
+      color: #2d3748;
+      border-bottom: 2px solid;
+      border-color: @blue-green;
     }
   }
 </style>

@@ -1,9 +1,6 @@
 <template>
   <div class="home">
-    <!-- <span class="greeting">{{ greeting }}</span> -->
-    <!-- <div class="title" v-for="(v, k) in content"> -->
-    <type-writer :str="str"></type-writer>
-    <!-- </div> -->
+    <type-writer class="info" :contents="contents"></type-writer>
   </div>
 </template>
 
@@ -17,37 +14,25 @@
     },
     data() {
       return {
-        content: [],
-        str: "Hi, I'm Xinkai Lin.</br> I'm a software developer living in New York.</br>I like video games, play guitar and taking photograph.",
-        words: [
-          "Hi, I am Xinkai Lin. I'm a Software developer living in New York",
-          'Here are some information about me',
-          'I like video games, guitar and taking photograph.',
+        contents: [
+          "<span class='underline'>He</span>llo.",
+          '</br></br>',
+          "I'm a <span class='underline'>dev</span>eloper from New York.",
+          '</br>',
+          "I like <span class='underline'>g</span>ames, <span class='underline'>g</span>uitar, <span class='underline'>tra</span>vel and <span class='underline'>photo</span>graph.",
         ],
       };
-    },
-    mounted() {
-      this.setTime();
-    },
-    methods: {
-      setTime() {
-        this.words.forEach((v, k) => {
-          setTimeout(() => {
-            this.content.push(v);
-          }, k * 2500);
-        });
-      },
     },
   };
 </script>
 
 <style lang="less" scoped>
   .home {
-    height: 700px;
+    min-height: 555px;
     // text-align: center;
-    // background-color: pink;
-    .greeting {
-      font-size: 24px;
+    background-color: rgb(202, 238, 202);
+    .info {
+      padding: 50px 100px;
     }
   }
 </style>

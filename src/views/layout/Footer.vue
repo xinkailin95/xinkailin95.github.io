@@ -1,5 +1,5 @@
 <template>
-  <el-footer>
+  <el-footer class="w">
     <div class="links">
       <a href="#">LinkedIn</a> | <a href="#">Resume</a> | <a href="#">Email</a>
     </div>
@@ -15,9 +15,9 @@
 
 <style lang="less" scoped>
   .el-footer {
-    text-align: center;
     height: 100px;
     padding-top: 30px;
+    text-align: center;
     // background-color: #f5f5f5;
     .links {
       margin-bottom: 10px;

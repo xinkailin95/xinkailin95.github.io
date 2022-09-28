@@ -1,0 +1,9 @@
+.w {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.underline {
+  border-bottom: 2px solid;
+  border-color: #4dc0b5;
+}
