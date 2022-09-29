@@ -35,9 +35,9 @@
   .home {
     min-height: 555px;
     // text-align: center;
-    background-color: rgb(202, 238, 202);
+    // background-color: rgb(202, 238, 202);
     .info {
-      padding: 50px 100px;
+      padding: 100px 200px;
     }
   }
 </style>
