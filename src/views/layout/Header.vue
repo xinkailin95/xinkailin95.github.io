@@ -7,10 +7,10 @@
       <ul>
         <li><router-link class="link-color" to="/home">Home</router-link></li>
         <li>
-          <router-link class="link-color" to="/about">About</router-link>
+          <router-link class="link-color" to="/photo">Photo</router-link>
         </li>
         <li>
-          <router-link class="link-color" to="/contact">Contact</router-link>
+          <router-link class="link-color" to="/games">Games</router-link>
         </li>
       </ul>
     </div>

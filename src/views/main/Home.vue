@@ -16,9 +16,9 @@
       return {
         contents: [
           "<span class='underline'>He</span>llo.",
-          '</br></br>',
+          '<br/><br/>',
           "I'm a <span class='underline'>dev</span>eloper from New York.",
-          '</br>',
+          '<br/>',
           "I like <span class='underline'>g</span>ames, <span class='underline'>g</span>uitar, <span class='underline'>tra</span>vel and <span class='underline'>photo</span>graph.",
         ],
       };
@@ -33,11 +33,11 @@
 
 <style lang="less" scoped>
   .home {
-    min-height: 555px;
+    min-height: 600px;
     // text-align: center;
     // background-color: rgb(202, 238, 202);
     .info {
-      padding: 100px 200px;
+      padding: 100px 215px;
     }
   }
 </style>

@@ -58,9 +58,6 @@
         clearTimeout(this.timer);
         this.words = this.content;
       },
-      sleep(ms) {
-        return new Promise((resolve) => setTimeout(resolve, ms));
-      },
     },
   };
 </script>

@@ -1,15 +1,36 @@
 <template>
   <el-footer class="w">
     <div class="links">
-      <a href="#">LinkedIn</a> | <a href="#">Resume</a> | <a href="#">Email</a>
+      <ul>
+        <li>
+          <a href="https://www.linkedin.com/in/xinkailin/" target="_blank">
+            LinkedIn
+          </a>
+        </li>
+        <li>|</li>
+        <li>
+          <a href="https://www.instagram.com/xinkai00007/" target="_blank">
+            Instagram
+          </a>
+        </li>
+        <li>|</li>
+        <li>
+          <a href="mailto: xinkailin1995@gmail.com"> Email</a>
+        </li>
+      </ul>
     </div>
-    <div class="copy-right">© Xinkai Lin. All Rights Reserved 2022</div>
+    <div class="copy-right">© Xinkai Lin. All Rights Reserved {{ date }}</div>
   </el-footer>
 </template>
 
 <script>
   export default {
     name: 'MyFooter',
+    data() {
+      return {
+        date: new Date().getFullYear(),
+      };
+    },
   };
 </script>
 
@@ -21,8 +42,9 @@
     // background-color: #f5f5f5;
     .links {
       margin-bottom: 10px;
-      a {
-        margin: 0 3px;
+      li {
+        display: inline;
+        margin: 0 1px;
       }
     }
     .copy-right {
