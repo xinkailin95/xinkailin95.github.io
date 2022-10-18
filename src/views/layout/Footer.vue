@@ -7,14 +7,12 @@
             LinkedIn
           </a>
         </li>
-        <li>|</li>
         <li>
           <a href="https://www.instagram.com/xinkai00007/" target="_blank">
             Instagram
           </a>
         </li>
-        <li>|</li>
-        <li>
+        <li class="lastLi">
           <a href="mailto: xinkailin1995@gmail.com"> Email</a>
         </li>
       </ul>
@@ -45,6 +43,9 @@
       li {
         display: inline;
         margin: 0 1px;
+        &:not(:last-child):after {
+          content: '|';
+        }
       }
     }
     .copy-right {

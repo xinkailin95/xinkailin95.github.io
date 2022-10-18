@@ -37,7 +37,7 @@
     // text-align: center;
     // background-color: rgb(202, 238, 202);
     .info {
-      padding: 100px 215px;
+      padding: 100px 0 0 250px;
     }
   }
 </style>

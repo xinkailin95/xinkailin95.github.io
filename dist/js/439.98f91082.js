@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkxinkailin95_github_io"]=self["webpackChunkxinkailin95_github_io"]||[]).push([[439],{9439:(n,i,t)=>{t.r(i),t.d(i,{default:()=>l});var a=t(3396),o=function(n){return(0,a.dD)("data-v-02105a62"),n=n(),(0,a.Cn)(),n},u={class:"photo"},e=o((function(){return(0,a._)("p",null,"This is photo.",-1)})),r=[e];function s(n,i,t,o,e,s){return(0,a.wg)(),(0,a.iD)("div",u,r)}const c={name:"MyPhoto"};var h=t(89);const d=(0,h.Z)(c,[["render",s],["__scopeId","data-v-02105a62"]]),l=d}}]);
-//# sourceMappingURL=439.98f91082.js.map
