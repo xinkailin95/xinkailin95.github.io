@@ -7,7 +7,7 @@
       type="card"
       height="400px"
     >
-      <el-carousel-item v-for="item in imgList" :key="item.id">
+      <el-carousel-item v-for="item in photoList" :key="item.id">
         <img
           class="myImg"
           :src="imgUrl(item.url)"
@@ -31,7 +31,7 @@
       ModalImg,
     },
     computed: {
-      ...mapState(['imgList', 'isPlay']),
+      ...mapState(['photoList', 'isPlay']),
     },
     methods: {
       ...mapMutations(['setPlay', 'setImgUrl', 'setImgAlt']),
